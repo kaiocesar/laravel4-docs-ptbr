@@ -101,25 +101,27 @@ Todos os drives, exceto `file` e `database` suportam os operadores  `increment` 
 
 	Cache::increment('chave', $amount);
 
-**Decrementing A Value**
+**Decrementando um valor**
 
-	Cache::decrement('key');
+	Cache::decrement('chave');
 
-	Cache::decrement('key', $amount);
+	Cache::decrement('chave', $amount);
 
 <a name="cache-sections"></a>
-## Cache Sections
+## Sessão de cache
 
-> **Note:** Cache sections are not supported when using the `file` or `database` cache drivers.
+> **Atenção:** Sessões de cache não são suportadas quando se utiliza os drivers de cache `file` ou `database`.
 
-Cache sections allow you to group related items in the cache, and then flush the entire section. To access a section, use the `section` method:
+Sessões de cache permitem agrupar items relacionados em cache, e então descarregue na sessão. Para acessar uma sessão, use o metodo `section`:
 
-**Accessing A Cache Section**
 
-	Cache::section('people')->put('John', $john);
+**Acessando uma sessão de cache**
 
-	Cache::section('people')->put('Anne', $anne);
+	Cache::section('pessoa')->put('John', $john);
 
+	Cache::section('pessoa')->put('Anne', $anne);
+
+Também pode acessar os items da sessão de cache, 
 You may also access cached items from the section, as well as use the other cache methods such as `increment` and `decrement`:
 
 **Accessing Items In A Cache Section**
