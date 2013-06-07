@@ -1,26 +1,42 @@
 # Artisan Development
 
-- [Introduction](#introduction)
-- [Building A Command](#building-a-command)
-- [Registering Commands](#registering-commands)
-- [Calling Other Commands](#calling-other-commands)
+- [Introdução](#introduction)
+- [Construção de um comando](#building-a-command)
+- [Registrando um comando](#registering-commands)
+- [Chamada para outros comandos](#calling-other-commands)
 
 <a name="introduction"></a>
-## Introduction
+## Introdução
 
+[PTBR]
+ Além dos comandos fornecidos com o Artisan, você pode construir seus próprios comandos para trabalhar com sua aplicação. Você pode armazenar seus comandos costumizados no diretorio `app/commands`; porém, você está livre para escolher o localização, enquanto seus comandos possam ser baseados nas configurações do `composer.json`.
+ 
+
+[ENG]
 In addition to the commands provided with Artisan, you may also build your own custom commands for working with your application. You may store your custom commands in the `app/commands` directory; however, you are free to choose your own storage location as long as your commands can be autoloaded based on your `composer.json` settings.
 
+
+
 <a name="building-a-command"></a>
-## Building A Command
+## Construindo um comando
 
-### Generating The Class
+### Gerando a class
 
+[PTBR]
+Para criar um novo comando, você pode usar o `command:make` pelo Artisan, que irá gerar um help do comando para inicialização: 
+
+
+[ENG]
 To create a new command, you may use the `command:make` Artisan command, which will generate a command stub to help you get started:
 
-**Generate A New Command Class**
+**Gerar um novo commando Class**
 
 	php artisan command:make FooCommand
 
+[PTBR]
+Por padrão, gerar comandos armazenará
+
+[ENG]
 By default, generated commands will be stored in the `app/commands` directory; however, you may specify custom path or namespace:
 
 	php artisan command:make FooCommand --path="app/classes" --namespace="Classes"
