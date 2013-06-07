@@ -133,13 +133,17 @@ Then you may flush all items in the section:
 	Cache::section('people')->flush();
 
 <a name="database-cache"></a>
-## Database Cache
 
+## Cache de banco de dados
+[PTBR]
+Ao utilizar o driver de cache `database`, você precisa setar a tabela que contem os items de cache. A seguir um exemplo de declaração `schema`  para table:
+
+[ENG]
 When using the `database` cache driver, you will need to setup a table to contain the cache items. Below is an example `Schema` declaration for the table:
 
-	Schema::create('cache', function($table)
+	Schema::create('cache', function($tabela)
 	{
-		$table->string('key')->unique();
-		$table->text('value');
-		$table->integer('expiration');
+		$table->string('chave')->unique();
+		$table->text('valor');
+		$table->integer('expiração'); // aqui cabe um valor numerico
 	});
