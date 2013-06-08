@@ -3,4 +3,5 @@
 Arquivos traduzidos
 - artisan.md (pendente revisão)
 - cache.md (pendente revisão)
-- command.md (5%)
+- command.md (pendente revisão)
+- 
