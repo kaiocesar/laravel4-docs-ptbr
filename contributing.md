@@ -1,22 +1,31 @@
-# Contributing To Laravel
+# Contribuindo para o Laravel
 
-- [Introduction](#introduction)
+- [Introdução](#introduction)
 - [Pull Requests](#pull-requests)
 - [Coding Guidelines](#coding-guidelines)
 
 <a name="introduction"></a>
-## Introduction
+## Introdção
 
-Laravel is free, open-source software, meaning anyone can contribute to its development and progress. Laravel source code is currently hosted on [Github](http://github.com), which provides an easy method for forking the project and merging your contributions.
+Laravel é livre, Software de código aberto, ou seja, qualquer um pode contribuir para o desenvolvimento e melhorias.
+o código do Laravel está atualmente no [Github](http://github.com), que fornece métodos faceis para cópiar o projeto e
+fundir suas contribuições.
 
 <a name="pull-requests"></a>
 ## Pull Requests
 
-The pull request process differs for new features and bugs. Before sending a pull request for a new feature, you should first create an issue with `[Proposal]` in the title. The proposal should describe the new feature, as well as implementation ideas. The proposal will then be reviewed and either approved or denied. Once a proposal is approved, a pull request may be created implementing the new feature. Pull requests which do not follow this guideline will be closed immediately.
+O processo de requisição pull difere de novas features e bugs. Antes de enviar a requisição pull para uma nova feature, você
+deverá primeiro criar um issue com o titulo `[Proposal]`. A proposta deve descrever a nova feature, bem como ideias de implementações.
+A proposta será revisa e ou aprovada ou negada. Uma vez que a proposta é aprovada, uma requisição pull podem ser criada 
+para a implementação da nova feature, requisições pull que não seguirem essa diretriz serão imediatamente fechadas. 
 
-Pull requests for bugs may be sent without creating any proposal issue. If you believe that you know of a solution for a bug that has been filed on Github, please leave a comment detailing your proposed fix.
 
-### Feature Requests
+Requisições pull para bug pode ser enviadas sem criação de qualquer issue de proposta. Se você acredita que encontrou 
+uma solução para um bug que te, sido apresentado no GitHub, por favor deixe um comentário detalhando em sua proposta 
+de correção.
+
+
+### Requisições de Feature
 
 If you have an idea for a new feature you would like to see added to Laravel, you may create an issue on Github with `[Request]` in the title. The feature request will then be reviewed by a core contributor.
 
