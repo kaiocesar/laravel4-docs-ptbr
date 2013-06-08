@@ -1,7 +1,7 @@
 # Contribuindo para o Laravel
 
 - [Introdução](#introduction)
-- [Pull Requests](#pull-requests)
+- [Requisições Pull](#pull-requests)
 - [Coding Guidelines](#coding-guidelines)
 
 <a name="introduction"></a>
@@ -12,7 +12,7 @@ o código do Laravel está atualmente no [Github](http://github.com), que fornec
 fundir suas contribuições.
 
 <a name="pull-requests"></a>
-## Pull Requests
+## Requisições Pull
 
 O processo de requisição pull difere de novas features e bugs. Antes de enviar a requisição pull para uma nova feature, você
 deverá primeiro criar um issue com o titulo `[Proposal]`. A proposta deve descrever a nova feature, bem como ideias de implementações.
@@ -26,13 +26,19 @@ de correção.
 
 
 ### Requisições de Feature
-
-If you have an idea for a new feature you would like to see added to Laravel, you may create an issue on Github with `[Request]` in the title. The feature request will then be reviewed by a core contributor.
+Se você tem ideias para novas implementações, e gostarias de ver-las adicionadas ao Laravel, você pode criar um issue no Github com o titulo `[Request]`.O Pedido de feature será então revisado por um contribuidor do Core do Laravel.
 
 <a name="coding-guidelines"></a>
 ## Coding Guidelines
 
-Laravel follows the [PSR-0](https://github.com/php-fig/fig-standards/blob/master/accepted/PSR-0.md) and [PSR-1](https://github.com/php-fig/fig-standards/blob/master/accepted/PSR-1-basic-coding-standard.md) coding standards. In addition to these standards, below is a list of other coding standards that should be followed:
+Laravel segue os padrões de projeto [PSR-0](https://github.com/php-fig/fig-standards/blob/master/accepted/PSR-0.md) e  
+[PSR-1](https://github.com/php-fig/fig-standards/blob/master/accepted/PSR-1-basic-coding-standard.md)
+
+
+Laravel follows the [PSR-0](https://github.com/php-fig/fig-standards/blob/master/accepted/PSR-0.md) 
+and [PSR-1](https://github.com/php-fig/fig-standards/blob/master/accepted/PSR-1-basic-coding-standard.md) 
+coding standards.
+In addition to these standards, below is a list of other coding standards that should be followed:
 
 - Namespace declarations should be on the same line as `<?php`.
 - Class opening `{` should be on the same line as the class name.
