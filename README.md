@@ -5,6 +5,7 @@
  documentação ser bem CLARO e SIMPLES, sempre é legal ter uma doc que é didatica e na sua lingua.
 
 **Colaborador: Kaio Cesar (tecnico.kaio@gmail.com)**
+
 **Documentação oficial em inglês (http://laravel.com/docs)**
 
 ##Arquivos traduzidos
