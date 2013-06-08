@@ -9,7 +9,7 @@
 
 Laravel é livre, Software de código aberto, ou seja, qualquer um pode contribuir para o desenvolvimento e melhorias.
 o código do Laravel está atualmente no [Github](http://github.com), que fornece métodos faceis para cópiar o projeto e
-fundir suas contribuições.
+mesclar suas contribuições.
 
 <a name="pull-requests"></a>
 ## Requisições Pull
