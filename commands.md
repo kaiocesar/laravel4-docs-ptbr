@@ -41,75 +41,129 @@ By default, generated commands will be stored in the `app/commands` directory; h
 
 	php artisan command:make FooCommand --path="app/classes" --namespace="Classes"
 
+
+### Escrevendo o comando
 ### Writing The Command
 
+[PTBR]
+Uma vez que seu comando gerado, você deverá preencher as propriedades `name` e `description` da classe, que serão utilizados ao exibir o comando `list`.
+
+[ENG]
 Once your command is generated, you should fill out the `name` and `description` properties of the class, which will be used when displaying your command on the `list` screen.
 
+[PTBR]
+O método `fire` será chamado quando seu comando for executado. Você pode  colocar qualquer lógica de comando neste método
+
+[ENG]
 The `fire` method will be called when your command is executed. You may place any command logic in this method.
 
-### Arguments & Options
+### Opções e argumentos
 
+[PTBR]
+Os métodos `getArguments` e `getOptions` são onde você pode definir qualquer argumento ou opções de seu comando recebido.
+ambos os métodos retornam um array de comandos, que são descrito em uma lista de opções de array.
+
+[ENG]
 The `getArguments` and `getOptions` methods are where you may define any arguments or options your command receives. Both of these methods return an array of commands, which are described by a list of array options.
 
+[PTBR]
+Ao definir `argumento`, os valores de definição do array seram representados da seguinte forma:
+
+[ENG]
 When defining `arguments`, the array definition values represent the following:
 
 	array($name, $mode, $description, $defaultValue)
 
+
+[PTBR]
+O argumento `mode` pode ser qualquer um dos seguintes: `InputArgument::REQUIRED` ou `ÌnputArgument::OPTIONAL`,
+
+Ao definir `options`, os valores de definição do array seram representados da seguinte forma:
+
+
+[ENG]
 The argument `mode` may be any of the following: `InputArgument::REQUIRED` or `InputArgument::OPTIONAL`.
 
 When defining `options`, the array definition values represent the following:
 
 	array($name, $shortcut, $mode, $description, $defaultValue)
 
+[PTBR]
+para `òptions`, o argumento `mode` pode ser: `ÌnputOption::VALUE_REQUIRED`, `InputOption::VALUE_OPTIONAL`, `
+InputOption::VALUE_IS_ARRAY`,`InputeOption::VALUE_NONE`,
+o mode `VALUE_IS_ARRAY`  indica que o switch pode ser usado várias vezes ao chamar o comando:
+
+[ENG]
 For options, the argument `mode` may be: `InputOption::VALUE_REQUIRED`, `InputOption::VALUE_OPTIONAL`, `InputOption::VALUE_IS_ARRAY`, `InputOption::VALUE_NONE`.
 
 The `VALUE_IS_ARRAY` mode indicates that the switch may be used multiple times when calling the command:
 
 	php artisan foo --option=bar --option=baz
 
+[PTBR]
+A opção `VALUE_NONE` indica que o option é simplesmente usado como um "Switch":
+
 The `VALUE_NONE` option indicates that the option is simply used as a "switch":
 
 	php artisan foo --option
 
-### Retrieving Input
+### Obtendo a entrada do comando
+
+Enquanto seu comando é executado, vocè obviamente precisará acessar o valor para o arguments e as options aceitas por sua
+aplicação. Para faze-o, pode-se usar os métodos `àrgument` e `option`:
 
 While your command is executing, you will obviously need to access the values for the arguments and options accepted by your application. To do so, you may use the `argument` and `option` methods:
 
-**Retrieving The Value Of A Command Argument**
+
+** Obter valor de um arguments de comando**
 
 	$value = $this->argument('name');
 
-**Retrieving All Arguments**
+**Obtér todos os arguments**
 
 	$arguments = $this->argument();
 
-**Retrieving The Value Of A Command Option**
+**Obtér o valor de uma option de comando**
 
 	$value = $this->option('name');
 
-**Retrieving All Options**
+**Obtér todoas as Options**
 
 	$options = $this->option();
 
-### Writing Output
 
+### Escrita
+
+[PTBR]
+Para enviar uma saida para o console, pode-se usar os métodos `info`, `comment`, `question` e `error`. cada método
+utiliza as cores ANSI adequadas para o seu propósito.
+
+[ENG]
 To send output to the console, you may use the `info`, `comment`, `question` and `error` methods. Each of these methods will use the appropriate ANSI colors for their purpose.
 
-**Sending Information To The Console**
+**Enviando informações via console**
 
 	$this->info('Display this on the screen');
 
-**Sending An Error Message To The Console**
+
+**Enviando uma mensagem de erro via console**
 
 	$this->error('Something went wrong!');
 
-### Asking Questions
+### Perguntas frequentes
 
+[PTBR]
+Você pode também usar os métodos `ask` e `confirm` para solicitar ao usuário a entrada de dados:
+
+[ENG]
 You may also use the `ask` and `confirm` methods to prompt the user for input:
 
+**Perguntar ao user via input**
 **Asking The User For Input**
 
 	$name = $this->ask('What is your name?');
+
+**Perguntar ao usuário via Input Secret
 
 **Asking The User For Secret Input**
 
