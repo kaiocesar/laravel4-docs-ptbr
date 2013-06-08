@@ -183,9 +183,7 @@ You may also specify a default value to the `confirm` method, which should be `t
 	$this->confirm($question, true);
 
 <a name="registering-commands"></a>
-## Comandos de registro
-
-## Registering Commands
+## Registrando comando
 
 [PTBR]
 Um vez que seu commando for concliido, você precisará registra-lo com o Artisan para estar disponível para o uso. isto é tipicamente feito no arquivo `app/start/artisan.php`. Sem este arquivo, você pode usar o método `Artisan::add` para registar o comando:
