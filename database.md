@@ -19,7 +19,7 @@ Atualmente o Laravel suporta quatro sistemas de banco de dados: MySQL, Postgres,
 <a name="running-queries"></a>
 ## Execução de consultas
 
-Ao configurar sua conexão com o banco de dados, você pode executar consultas usando a clas `DB`.
+Ao configurar sua conexão com o banco de dados, você pode executar consultas usando a classe `DB`.
 
 
 **Executando uma consulta com SELECT**
@@ -78,7 +78,10 @@ Para executar um conjunto de operações transaction dentro do banco de dados, v
 Quando se utiliza várias conexões, você pode acessar-los atráves do método `DB::connection`:
 
 	$users = DB::connection('foo')->select(...);
+[PTBR]
+Você pode acessar, por exemplo uma instancia PDO
 
+[ENG]
 You may also access the raw, underlying PDO instance:
 
 	$pdo = DB::connection()->getPdo();
