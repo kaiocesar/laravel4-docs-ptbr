@@ -2,7 +2,7 @@
 
 - [Introdução](#introduction)
 - [Construção de um comando](#building-a-command)
-- [Registrando um comando](#registering-commands)
+- [Comandos de registro](#registering-commands)
 - [Chamada para outros comandos](#calling-other-commands)
 
 <a name="introduction"></a>
@@ -153,52 +153,77 @@ To send output to the console, you may use the `info`, `comment`, `question` and
 ### Perguntas frequentes
 
 [PTBR]
-Você pode também usar os métodos `ask` e `confirm` para solicitar ao usuário a entrada de dados:
+Você também pode usar os métodos de input `ask` e `confirm` para enviar solicitações ao usuário:
 
 [ENG]
 You may also use the `ask` and `confirm` methods to prompt the user for input:
 
-**Perguntar ao user via input**
-**Asking The User For Input**
+
+**Solicitação para o usuário**
 
 	$name = $this->ask('What is your name?');
 
-**Perguntar ao usuário via Input Secret
+**Solicitação de senha**
 
-**Asking The User For Secret Input**
+	$password = $this->secret('Qual é sua senha?');
 
-	$password = $this->secret('What is the password?');
 
-**Asking The User For Confirmation**
+**Solicitação de confirmação ao usuário**
 
-	if ($this->confirm('Do you wish to continue? [yes|no]'))
+	if ($this->confirm('Você deseja continuar? [sim|não]'))
 	{
 		//
 	}
+[PTBR]
+Você também pode especificar um valor padrão para os métodos `confirm`, que deveram ser `true` ou `false`;
 
+[ENG]
 You may also specify a default value to the `confirm` method, which should be `true` or `false`:
 
 	$this->confirm($question, true);
 
 <a name="registering-commands"></a>
+## Comandos de registro
+
 ## Registering Commands
 
+[PTBR]
+Um vez que seu commando for concliido, você precisará registra-lo com o Artisan para estar disponível para o uso. isto é tipicamente feito no arquivo `app/start/artisan.php`. Sem este arquivo, você pode usar o método `Artisan::add` para registar o comando:
+
+[ENG]
 Once your command is finished, you need to register it with Artisan so it will be available for use. This is typically done in the `app/start/artisan.php` file. Within this file, you may use the `Artisan::add` method to register the command:
+
+
+**Registrar um comando com Artisan**
 
 **Registering An Artisan Command**
 
 	Artisan::add(new CustomCommand);
 
+Se seu comando está registrado no apllicaiton [Ioc container](/docs/ioc), pode-se usar o método `Artisan::resolve` para 
+tornar-lo disponibel para o Artisan:
+
 If your command is registered in the application [IoC container](/docs/ioc), you may use the `Artisan::resolve` method to make it available to Artisan:
 
+
+[PTBR]
+**Registrando um comando IoC container**
+
+[ENG]
 **Registering A Command That Is In The IoC Container**
 
 	Artisan::resolve('binding.name');
 
 <a name="calling-other-commands"></a>
-## Calling Other Commands
+## Chamar outros comandos
+[PTB]
+Você pode querer chamar outros comando atráves do seus comandos. você pode fazer isso usando o método `call`:
 
+[ENG]
 Sometimes you may wish to call other commands from your command. You may do so using the `call` method:
+
+
+**Chamar outro comando**
 
 **Calling Another Command**
 
