@@ -1,8 +1,8 @@
 ﻿# Translate Laravel Docs - PTBR
 
- A tradução da doc do laravel tem o intuito de divulgar essa grande framework que é o Laravel, e 
- facilitar ainda mais o aprendizado para quem fala português. Sei que apesar do inglês utilizado na 
- documentação ser bem CLARO e SIMPLES, sempre é legal ter uma doc que é didatica e na sua lingua.
+ A tradução da documentação do Laravel tem o intuito de divulgar o grande trabalho da comunidade e o forte desempenho que 
+ essa framework excersse em cima de nossos trabalhos, e facilitar ainda mais o aprendizado para quem fala português(Brasil). 
+ Apesar de o inglês utilizado na  documentação oficial ser bem CLARO e SIMPLES, sempre é legal ter uma documentação em seu idioma.
 
 **Colaborador: Kaio Cesar (tecnico.kaio@gmail.com)**
 
