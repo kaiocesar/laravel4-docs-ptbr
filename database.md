@@ -1,50 +1,59 @@
-# Basic Database Usage
+# Utilização básica com banco de dados
 
-- [Configuration](#configuration)
-- [Running Queries](#running-queries)
-- [Database Transactions](#database-transactions)
-- [Accessing Connections](#accessing-connections)
-- [Query Logging](#query-logging)
+- [Configuração](#configuration)
+- [Execução de consultas](#running-queries)
+- [Transactions no banco de dados](#database-transactions)
+- [Acessar conexões](#accessing-connections)
+- [Carregar consultas](#query-logging)
 
 <a name="configuration"></a>
-## Configuration
+## Configuração
 
-Laravel makes connecting with databases and running queries extremely simple. The database configuration file is `app/config/database.php`. In this file you may define all of your database connections, as well as specify which connection should be used by default. Examples for all of the supported database systems are provided in this file.
+Laravel conecta com o banco de dados e executa consultas extremamente simples. O banco de dados é configurado pelo arquivo `app/config/database.php`. Neste arquivo pode-se definir todas suas conexões de banco de dados, bem como especificar  qual conexão deverá utilizar-se por padrão. Exemplo para todos sistemas de banco de dados suportados e fornecidos neste arquivo.
 
-Currently Laravel supports four database systems: MySQL, Postgres, SQLite, and SQL Server.
+Atualmente o Laravel suporta quatro sistemas de banco de dados: MySQL, Postgres, SQLite e SQL Server.
+
+
+
 
 <a name="running-queries"></a>
-## Running Queries
+## Execução de consultas
 
-Once you have configured your database connection, you may run queries using the `DB` class.
+Ao configurar sua conexão com o banco de dados, você pode executar consultas usando a clas `DB`.
 
-**Running A Select Query**
+
+**Executando uma consulta com SELECT**
 
 	$results = DB::select('select * from users where id = ?', array(1));
 
-The `select` method will always return an `array` of results.
+O método `select` sempre retornará um `array` com resultados.
 
-**Running An Insert Statement**
+
+**Executando uma instrução INSERT**
 
 	DB::insert('insert into users (id, name) values (?, ?)', array(1, 'Dayle'));
 
-**Running An Update Statement**
+**Executando uma instrução UPDATE**
 
 	DB::update('update users set votes = 100 where name = ?', array('John'));
 
-**Running A Delete Statement**
+**Executando uma instrução DELETE**
 
 	DB::delete('delete from users');
 
-> **Note:** The `update` and `delete` statements return the number of rows affected by the operation.
+> **Observe:** As instruções `update` e `delete` retornam um numero de linhas afetadas pela operação.
 
+[ptbr]
+**Executando uma instrução geral**
+
+[eng]
 **Running A General Statement**
 
 	DB::statement('drop table users');
+	
+Pode-se listar os eventos de uma consulta utilizando o método `DB::listen`:
 
-You may listen for query events using the `DB::listen` method:
-
-**Listening For Query Events**
+**Listando eventos de uma consulta**
 
 	DB::listen(function($sql, $bindings, $time)
 	{
@@ -52,9 +61,9 @@ You may listen for query events using the `DB::listen` method:
 	});
 
 <a name="database-transactions"></a>
-## Database Transactions
 
-To run a set of operations within a database transaction, you may use the `transaction` method:
+## Transactions no banco de dados
+Para executar um conjunto de operações transaction dentro do banco de dados, você pode utilizar o método `transaction`:
 
 	DB::transaction(function()
 	{
@@ -64,9 +73,9 @@ To run a set of operations within a database transaction, you may use the `trans
 	});
 
 <a name="accessing-connections"></a>
-## Accessing Connections
 
-When using multiple connections, you may access them via the `DB::connection` method:
+## Acessar uma conexão
+Quando se utiliza várias conexões, você pode acessar-los atráves do método `DB::connection`:
 
 	$users = DB::connection('foo')->select(...);
 
