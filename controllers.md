@@ -34,6 +34,10 @@ e pode ser usado um local para compartilhar a lógica dos controllers. o `BaseCo
 
 	Route::get('user/{id}', 'UserController@showProfile');
 
+Você pode escolher por empacotar ou organizar sua aplicação usando namespaces do PHP, simplismente use o nome completo da classe quando definir a rota.
+
+
+
 If you choose to nest or organize your controller using PHP namespaces, simply use the fully qualified class name when defining the route:
 
 	Route::get('foo', 'Namespace\FooController@method');
