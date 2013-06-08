@@ -1,24 +1,24 @@
 # Controllers
 
-- [Basic Controllers](#basic-controllers)
-- [Controller Filters](#controller-filters)
+- [O Basico sobre Controllers](#basic-controllers)
+- [Filtros nos Controllers](#controller-filters)
 - [RESTful Controllers](#restful-controllers)
-- [Resource Controllers](#resource-controllers)
-- [Handling Missing Methods](#handling-missing-methods)
+- [Recurso de Controllers](#resource-controllers)
+- [Manipulação de métodos indefinidos](#handling-missing-methods)
 
 <a name="basic-controllers"></a>
-## Basic Controllers
+## O Basico sobre controllers
 
-Instead of defining all of your route-level logic in a single `routes.php` file, you may wish to organize this behavior using Controller classes. Controllers can group related route logic into a class, as well as take advantage of more advanced framework features such as automatic [dependency injection](/docs/ioc).
+Ao invés de definir toda a lógica do seu nível de rotas em um unico arquivo `routes.php`, você pode querer organiza todo o 
+comportamente dos controllers que tipicamente estão armazenados no diretório `app/controllers`, e este diretório está registrado na opção `classmap` do seu arquivo padrão `composer.json`
 
-Controllers are typically stored in the `app/controllers` directory, and this directory is registered in the `classmap` option of your `composer.json` file by default.
 
-Here is an example of a basic controller class:
+Aqui está um exemplo básico de uma classes de controller:
 
 	class UserController extends BaseController {
 
-		/**
-		 * Show the profile for the given user.
+		/**		 
+		 * Exibi o perfil para o usuário
 		 */
 		public function showProfile($id)
 		{
@@ -29,7 +29,8 @@ Here is an example of a basic controller class:
 
 	}
 
-All controllers should extend the `BaseController` class. The `BaseController` is also stored in the `app/controllers` directory, and may be used as a place to put shared controller logic. The `BaseController` extends the framework's `Controller` class. Now, We can route to this controller action like so:
+Todos os Controllers deveram estender a classe `BaseController`. o `BaseController` está também armazenado no diretório `app/controllers`
+e pode ser usado um local para compartilhar a lógica dos controllers. o `BaseController``estende a classe `Controller` da framework. Agora, podemos rotear a ação deste controller:
 
 	Route::get('user/{id}', 'UserController@showProfile');
 
