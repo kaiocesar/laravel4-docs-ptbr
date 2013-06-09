@@ -8,11 +8,11 @@
 **Documentação oficial em inglês (http://laravel.com/docs)**
 
 ##Arquivos traduzidos
-- [artisan.md](kaiocesar/laravel4-docs-ptbr/artisan.md)
-- cache.md (pendente revisão)
-- command.md (pendente revisão)
-- configuration.md (pendente revisão)
-- contributing.md (pendente revisão)
-- database.md (pendente revisão)
-- documentation.md(ok)
-- eloquent.md (5%)
+- [artisan.md](https://github.com/kaiocesar/laravel4-docs-ptbr/artisan.md)
+- [cache.md](https://github.com/kaiocesar/laravel4-docs-ptbr/cache.md)
+- [command.md](https://github.com/kaiocesar/laravel4-docs-ptbr/command.md)
+- [configuration.md](https://github.com/kaiocesar/laravel4-docs-ptbr/configuration.md)
+- [contributing.md](https://github.com/kaiocesar/laravel4-docs-ptbr/contributing.md)
+- [database.md](https://github.com/kaiocesar/laravel4-docs-ptbr/database.md)
+- [documentation.md](https://github.com/kaiocesar/laravel4-docs-ptbr/documentation.md)
+- [eloquent.md](https://github.com/kaiocesar/laravel4-docs-ptbr/eloquent.md)
