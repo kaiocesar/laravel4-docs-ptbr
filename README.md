@@ -15,3 +15,4 @@
 - contributing.md (pendente revisão)
 - database.md (pendente revisão)
 - documentation.md(ok)
+- eloquent.md (5%)
