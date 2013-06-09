@@ -13,4 +13,5 @@
 - command.md (pendente revisão)
 - configuration.md (pendente revisão)
 - contributing.md (pendente revisão)
-- database.md (89%)
+- database.md (pendente revisão)
+- documentation.md(ok)
