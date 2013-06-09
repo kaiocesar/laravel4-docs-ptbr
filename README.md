@@ -8,8 +8,8 @@
 **Documentação oficial em inglês (http://laravel.com/docs)**
 
 ##Arquivos traduzidos
-- [artisan.md](https://github.com/kaiocesar/laravel4-docs-ptbr/artisan.md)
-- [cache.md](https://github.com/kaiocesar/laravel4-docs-ptbr/cache.md)
+- [artisan.md](laravel4-docs-ptbr/blob/master/artisan.md)
+- [cache.md](https://github.com/kaiocesar/laravel4-docs-ptbr/blob/master/cache.md)
 - [command.md](https://github.com/kaiocesar/laravel4-docs-ptbr/command.md)
 - [configuration.md](https://github.com/kaiocesar/laravel4-docs-ptbr/configuration.md)
 - [contributing.md](https://github.com/kaiocesar/laravel4-docs-ptbr/contributing.md)
