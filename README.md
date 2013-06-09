@@ -8,7 +8,7 @@
 **Documentação oficial em inglês (http://laravel.com/docs)**
 
 ##Arquivos traduzidos
-- artisan.md (pendente revisão)[kaiocesar/laravel4-docs-ptbr/artisan.md]
+- [artisan.md](kaiocesar/laravel4-docs-ptbr/artisan.md)
 - cache.md (pendente revisão)
 - command.md (pendente revisão)
 - configuration.md (pendente revisão)
