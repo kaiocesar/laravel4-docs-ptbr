@@ -44,23 +44,29 @@ Você também pode especificar um nome de rota para controller:
 	Route::get('foo', array('uses' => 'FooController@method',
 											'as' => 'name'));
 
-To generate a URL to a controller action, you may use the `URL::action` method:
+Para gerar uma URL para uma action de um controller, você pode usar o método `URL::action`:
 
 	$url = URL::action('FooController@method');
 
-You may access the name of the controller action being run using the `currentRouteAction` method:
+Você pode acessar o nome da action do controller, executando o método `currentRouteAction`:
 
 	$action = Route::currentRouteAction();
 
 <a name="controller-filters"></a>
-## Controller Filters
+## Filtro de controllers
 
+
+[PTBR]
+[Filtros](/docs/routing#route-filters) podem ser especificados no controle de rotas comum para rotas "regulares":
+
+
+[ENG]
 [Filters](/docs/routing#route-filters) may be specified on controller routes similar to "regular" routes:
 
 	Route::get('profile', array('before' => 'auth',
 				'uses' => 'UserController@showProfile'));
 
-However, you may also specify filters from within your controller:
+Porém, você também pode especificar filtros dentro de seu controller:
 
 	class UserController extends BaseController {
 
@@ -79,7 +85,8 @@ However, you may also specify filters from within your controller:
 
 	}
 
-You may also specify controller filters inline using a Closure:
+você também pode especificar filtros de controller, inline, usando uma clausura:
+
 
 	class UserController extends BaseController {
 
@@ -98,6 +105,9 @@ You may also specify controller filters inline using a Closure:
 
 <a name="restful-controllers"></a>
 ## RESTful Controllers
+
+
+
 
 Laravel allows you to easily define a single route to handle every action in a controller using simple, REST naming conventions. First, define the route using the `Route::controller` method:
 
