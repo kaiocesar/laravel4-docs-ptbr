@@ -1,8 +1,8 @@
-- Preface
+- Apresentação
     - [Introduction](/laravel4-docs-ptbr/introduction)
     - [Quickstart](/laravel4-docs-ptbr/quick)
     - [Contributing](/laravel4-docs-ptbr/contributing)
-- Getting Started
+- Iniciando
     - [Installation](/laravel4-docs-ptbr/installation)
     - [Configuration](/laravel4-docs-ptbr/configuration)
     - [Request Lifecycle](/laravel4-docs-ptbr/lifecycle)
@@ -11,7 +11,7 @@
     - [Views & Responses](/laravel4-docs-ptbr/responses)
     - [Controllers](/laravel4-docs-ptbr/controllers)
     - [Errors & Logging](/laravel4-docs-ptbr/errors)
-- Learning More
+- Saiba mais
     - [Cache](/laravel4-docs-ptbr/cache)
     - [Events](/laravel4-docs-ptbr/events)
     - [Facades](/laravel4-docs-ptbr/facades)
@@ -27,7 +27,7 @@
     - [Templates](/laravel4-docs-ptbr/templates)
     - [Unit Testing](/laravel4-docs-ptbr/testing)
     - [Validation](/laravel4-docs-ptbr/validation)
-- Database
+- Banco de Dados
     - [Basic Usage](/laravel4-docs-ptbr/database)
     - [Query Builder](/laravel4-docs-ptbr/queries)
     - [Eloquent ORM](/laravel4-docs-ptbr/eloquent)
