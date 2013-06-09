@@ -1,25 +1,28 @@
-# Laravel Quickstart
+# Laravel Inicio rápido
 
-- [Installation](#installation)
-- [Routing](#routing)
-- [Creating A View](#creating-a-view)
-- [Creating A Migration](#creating-a-migration)
-- [Eloquent ORM](#eloquent-orm)
-- [Displaying Data](#displaying-data)
+- [Instalação](#installation)
+- [Roteamento](#routing)
+- [Criar uma View](#creating-a-view)
+- [Crar um Migration](#creating-a-migration)
+- [Eloquent ORM(mapeamento de objetos relacionais](#eloquent-orm)
+- [Exibindo os dados](#displaying-data)
 
 <a name="installation"></a>
-## Installation
+## Instalação
 
-To install the Laravel framework, you may issue the following command from your terminal:
+
+Para instalar o Laravel framework, você pode emitir o seguinte comando através do seu terminal:
 
 	composer create-project laravel/laravel
 
-Or, you may also download a copy of the [repository from Github](https://github.com/laravel/laravel/archive/master.zip). Next, after [installing Composer](http://getcomposer.org), run the `composer install` command in the root of your project directory. This command will download and install the framework's dependencies.
+Ou, você também pode baixar uma cópia através do [repositório Github](https://github.com/laravel/laravel/archive/master.zip). Em seguida, depois de [instalar o composer](http://getcomposer.org), execute o comando `composer install` na raiz do diretório do seu projeto. Este comando baixará e instalará as dependências da framework.
 
-After installing the framework, take a glance around the project to familiarize yourself with the directory structure. The `app` directory contains folders such as `views`, `controllers`, and `models`. Most of your application's code will reside somewhere in this directory. You may also wish to explore the `app/config` directory and the configuration options that are available to you.
+Depois de instalar a framework, dê uma olhada ao redor do projeto para familiarizar-se com a estrutura de diretório. O diretório `app` contém as pasta `views`, `controllers` e `models`. A maior parte do código da sua aplicação estará em algum destes diretórios. Você também pode querer explorar diretório `app/config` e configurar as opções disponíveis para você.
 
 <a name="routing"></a>
-## Routing
+## Roteamento
+
+Para começar, vamos criar nosso primeira rota. No Laravel, simples
 
 To get started, let's create our first route. In Laravel, the simplest route is a route to a Closure. Pop open the `app/routes.php` file and add the following route to the bottom of the file:
 
