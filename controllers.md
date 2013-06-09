@@ -36,13 +36,10 @@ e pode ser usado um local para compartilhar a lógica dos controllers. o `BaseCo
 
 Você pode escolher por empacotar ou organizar sua aplicação usando namespaces do PHP, simplismente use o nome completo da classe quando definir a rota.
 
-
-
-If you choose to nest or organize your controller using PHP namespaces, simply use the fully qualified class name when defining the route:
-
 	Route::get('foo', 'Namespace\FooController@method');
 
-You may also specify names on controller routes:
+Você também pode especificar um nome de rota para controller:
+
 
 	Route::get('foo', array('uses' => 'FooController@method',
 											'as' => 'name'));
