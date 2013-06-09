@@ -1,51 +1,56 @@
 # Forms & HTML
 
-- [Opening A Form](#opening-a-form)
-- [CSRF Protection](#csrf-protection)
-- [Form Model Binding](#form-model-binding)
+- [Criar um Form](#opening-a-form)
+- [Proteção CSRF](#csrf-protection)
+- [Criar form apartir de um model](#form-model-binding)
 - [Labels](#labels)
-- [Text, Text Area, Password & Hidden Fields](#text)
-- [Checkboxes and Radio Buttons](#checkboxes-and-radio-buttons)
+- [Text, Text Area, Password e Hidden Fields](#text)
+- [Checkboxes e Radio Buttons](#checkboxes-and-radio-buttons)
 - [File Input](#file-input)
 - [Drop-Down Lists](#drop-down-lists)
 - [Buttons](#buttons)
 - [Custom Macros](#custom-macros)
 
 <a name="opening-a-form"></a>
-## Opening A Form
+## Criar um Form
 
-**Opening A Form**
+**Criar um elemento Form**
 
 	{{ Form::open(array('url' => 'foo/bar')) }}
 		//
 	{{ Form::close() }}
 
+
+Por padrão, a Tag `method` do form será do tipo `POST`, porém você tem liberdade para espeficar um `method` diferente:
+
 By default, a `POST` method will be assumed; however, you are free to specify another method:
 
 	echo Form::open(array('url' => 'foo/bar', 'method' => 'put'))
 
+
 > **Note:** Since HTML forms only support `POST`, `PUT` and `DELETE` methods will be spoofed by automatically adding a `_method` hidden field to your form.
 
-You may also open forms that point to named routes or controller actions:
+
+Você também pode criar forms que apontam para rotas ou actions de controllers:
 
 	echo Form::open(array('route' => 'route.name'))
 
 	echo Form::open(array('action' => 'Controller@method'))
-
-If your form is going to accept file uploads, add a `files` option to your array:
+	
+Se o seu Form vai aceitar o upload de arquivo, então adicione a opção `files` para o array, desta form:
 
 	echo Form::open(array('url' => 'foo/bar', 'files' => true))
 
 <a name="csrf-protection"></a>
-## CSRF Protection
+## Proteção CSRF
 
-Laravel provides an easy method of protecting your application from cross-site request forgeries. First, a random token is placed in your user's session. Don't sweat it, this is done automatically. The CSRF token will be added to your forms as a hidden field automatically. However, if you wish to generate the HTML for the hidden field, you may use the `token` method:
+Laravel fornece um método fácil para proteger sua aplicação de falsificações de requisições [cross-site](http://pt.wikipedia.org/wiki/Cross-site_scripting). Primeiro, um Token é gerado para a session do usuário, não se preocupe, isto é feito automaticamente, O Token CSRF será adicionado automaticamente a um campo do tipo hidden, Porém, se você quiser gerar o campo hidden, você pode usar o método `token`:
 
-**Adding The CSRF Token To A Form**
+**Adicionando o Token CSRF para um Form**
 
 	echo Form::token();
 
-**Attaching The CSRF Filter To A Route**
+**Anexar um filtro CSRF para uma Rota**
 
 	Route::post('profile', array('before' => 'csrf', function()
 	{
@@ -55,12 +60,13 @@ Laravel provides an easy method of protecting your application from cross-site r
 <a name="form-model-binding"></a>
 ## Form Model Binding
 
-Often, you will want to populate a form based on the contents of a model. To do so, use the `Form::model` method:
+Frequentemente, você vai querer popular um form baseando-se no conteudo de um model, ao faze-lo, use o método `Form::model`
+
 
 **Opening A Model Form**
 
 	echo Form::model($user, array('route' => array('user.update', $user->id)))
-
+Agora, Quando você gerar um elemento de form, como entrada de texto, o valor do campo input será automaticamente o mesmo do campo do model. Por Exemplo, para um campo do form nomeado como `email`,  o atributo `email` model usuario, seria definido como o value do input do form. Porém, 
 Now, when you generate a form element, like a text input, the model's value matching the field's name will automatically be set as the field value. So, for example, for a text input named `email`, the user model's `email` attribute would be set as the value. However, there's more! If there is an item in the Session flash data matching the input name, that will take precedence over the model's value. So, the priority looks like this:
 
 1. Session Flash Data (Old Input)
