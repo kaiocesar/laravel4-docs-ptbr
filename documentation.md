@@ -28,12 +28,12 @@
     - [Unit Testing](/laravel4-docs-ptbr/testing)
     - [Validation](/laravel4-docs-ptbr/validation)
 - Banco de Dados
-    - [Basic Usage](/laravel4-docs-ptbr/database)
+    - [Uso básico](/laravel4-docs-ptbr/database)
     - [Query Builder](/laravel4-docs-ptbr/queries)
     - [Eloquent ORM](/laravel4-docs-ptbr/eloquent)
     - [Schema Builder](/laravel4-docs-ptbr/schema)
     - [Migrations & Seeding](/laravel4-docs-ptbr/migrations)
     - [Redis](/laravel4-docs-ptbr/redis)
-- Artisan CLI
+- Artisan CLI(Command line - linha de comando)
     - [Overview](/laravel4-docs-ptbr/artisan)
     - [Development](/laravel4-docs-ptbr/commands)
