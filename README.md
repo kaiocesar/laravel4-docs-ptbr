@@ -10,7 +10,7 @@
 ##Arquivos traduzidos
 - [artisan.md](https://github.com/kaiocesar/laravel4-docs-ptbr/blob/master/artisan.md)
 - [cache.md](https://github.com/kaiocesar/laravel4-docs-ptbr/blob/master/cache.md)
-- [command.md](https://github.com/kaiocesar/laravel4-docs-ptbr/blob/master/command.md)
+- [command.md](https://github.com/kaiocesar/laravel4-docs-ptbr/blob/master/commands.md)
 - [configuration.md](https://github.com/kaiocesar/laravel4-docs-ptbr/blob/master/configuration.md)
 - [contributing.md](https://github.com/kaiocesar/laravel4-docs-ptbr/blob/master/contributing.md)
 - [database.md](https://github.com/kaiocesar/laravel4-docs-ptbr/blob/master/database.md)
