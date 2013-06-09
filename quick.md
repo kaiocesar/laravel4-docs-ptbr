@@ -22,7 +22,7 @@ Depois de instalar a framework, dê uma olhada ao redor do projeto para familiar
 <a name="routing"></a>
 ## Roteamento
 
-Para começar, vamos criar nosso primeira rota. No Laravel, simples
+Para começar, vamos criar nosso primeira rota. No Laravel, a mais simples rota é a rota para uma clausura.
 
 To get started, let's create our first route. In Laravel, the simplest route is a route to a Closure. Pop open the `app/routes.php` file and add the following route to the bottom of the file:
 
