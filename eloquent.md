@@ -1,35 +1,44 @@
-# Eloquent ORM
+# Eloquent ORM(Object relational mapping - Mapeamento de objeto-relacional)
 
-- [Introduction](#introduction)
-- [Basic Usage](#basic-usage)
-- [Mass Assignment](#mass-assignment)
+- [Introdução](#introduction)
+- [Utilização básica](#basic-usage)
+- [Conjunto de atributos](#mass-assignment)
 - [Insert, Update, Delete](#insert-update-delete)
 - [Soft Deleting](#soft-deleting)
 - [Timestamps](#timestamps)
-- [Query Scopes](#query-scopes)
-- [Relationships](#relationships)
-- [Querying Relations](#querying-relations)
-- [Eager Loading](#eager-loading)
-- [Inserting Related Models](#inserting-related-models)
+- [Escopo de consultas](#query-scopes)
+- [Relacionamento](#relationships)
+- [Consultas relacionadas](#querying-relations)
+- [pré-carregamento](#eager-loading)
+- [Inserção de modelo relacionado](#inserting-related-models)
 - [Touching Parent Timestamps](#touching-parent-timestamps)
-- [Working With Pivot Tables](#working-with-pivot-tables)
+- [Trabalhando com tabelas dinâmicas](#working-with-pivot-tables)
 - [Collections](#collections)
 - [Accessors & Mutators](#accessors-and-mutators)
 - [Date Mutators](#date-mutators)
 - [Model Events](#model-events)
 - [Model Observers](#model-observers)
-- [Converting To Arrays / JSON](#converting-to-arrays-or-json)
+- [Convertendo Arrays para JSON](#converting-to-arrays-or-json)
 
 <a name="introduction"></a>
-## Introduction
+## Introdução
 
+[PTBR]
+O ORM Eloquent includo ao Laravel, fornece uma linda e simples ActiveRecord para trabalhar com seu banco de dados. Cada tabela do banco de dado corresponde a um "Model" que interage diretamente com a tabela.
+
+[ENG]
 The Eloquent ORM included with Laravel provides a beautiful, simple ActiveRecord implementation for working with your database. Each database table has a corresponding "Model" which is used to interact with that table.
 
-Before getting started, be sure to configure a database connection in `app/config/database.php`.
+ Antes de começar, certifique-se de configurar a conexão do banco de dados em `app/config/database.php`
+
 
 <a name="basic-usage"></a>
-## Basic Usage
+## Utilização básica
 
+[PTBR]
+Para começar, criae um model Eloquent. Os Models normalmente se localização no diretório `app/models`, mas você tem liberdade para coloca-los em qualquer lugar em que possar ser visto pelo arquivo `composer.json`
+
+[ENG]
 To get started, create an Eloquent model. Models typically live in the `app/models` directory, but you are free to place them anywhere that can be auto-loaded according to your `composer.json` file.
 
 **Defining An Eloquent Model**
