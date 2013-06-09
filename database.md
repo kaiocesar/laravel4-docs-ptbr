@@ -91,8 +91,10 @@ Sometimes you may need to reconnect to a given database:
 	DB::reconnect('foo');
 
 <a name="query-logging"></a>
-## Query Logging
-
+## Log das consultas(queries)
+[PTBR]
+Por parão, O Laravel mantém um log de todas as consultas que tenham sido executadas por requisições atuais. Porém, em alguns casos, tal como quando inserimos um grande numero de linhas, isto pode causar um excesso na memória da aplicação. Para desabilitar o log, você pode usar o método `disableQueryLog`:
+[ENG]
 By default, Laravel keeps a log in memory of all queries that have been run for the current request. However, in some cases, such as when inserting a large number of rows, this can cause the application to use excess memory. To disable the log, you may use the `disableQueryLog` method:
 
 	DB::connection()->disableQueryLog();
